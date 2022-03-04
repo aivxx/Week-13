@@ -1,22 +1,45 @@
 {
     "name": "InputActions",
-    "maps": [],
-    "controlSchemes": [
+    "maps": [
         {
-            "name": "XR Controllers",
-            "bindingGroup": "XR Controllers",
-            "devices": [
+            "name": "XRInteractor",
+            "id": "d416b2c7-c8d7-4059-a85c-832fde417cd7",
+            "actions": [
                 {
-                    "devicePath": "<XRController>{LeftHand}",
-                    "isOptional": false,
-                    "isOR": false
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "c77f268e-f0e7-4c87-ad3f-36b099ad62ed",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bd2b85ef-571b-4d65-8e0b-dd629d89e0e6",
+                    "path": "<XRController>{LeftHand}/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
-                    "devicePath": "<XRController>{RightHand}",
-                    "isOptional": false,
-                    "isOR": false
+                    "name": "",
+                    "id": "6bbf20bb-c82e-4b6c-a1a1-3719ffb09bd1",
+                    "path": "<XRController>{RightHand}/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
-    ]
+    ],
+    "controlSchemes": []
 }

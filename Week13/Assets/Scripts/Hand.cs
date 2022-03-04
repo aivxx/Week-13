@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public enum HandType
@@ -36,18 +37,27 @@ public class Hand : MonoBehaviour
         }
     }
 
-    [Obsolete]
+    
     private void OnEnable()
     {
-        interactor.onSelectEntered.AddListener(OnGrab);
-        interactor.onSelectExited.AddListener(OnRelease);
+        interactor.selectEntered.AddListener(OnGrab);
+        interactor.selectExited.AddListener(OnRelease);
     }
 
-    [Obsolete]
+    private void OnRelease(SelectExitEventArgs arg0)
+    {
+        throw new NotImplementedException();
+    }
+
+    private void OnGrab(SelectEnterEventArgs arg0)
+    {
+        throw new NotImplementedException();
+    }
+
     private void OnDisable()
     {
-        interactor.onSelectEntered.RemoveListener(OnGrab);
-        interactor.onSelectExited.RemoveListener(OnRelease);
+        interactor.selectEntered.RemoveListener(OnGrab);
+        interactor.selectExited.RemoveListener(OnRelease);
     }
 
     // Start is called before the first frame update
