@@ -40,8 +40,8 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""bd2b85ef-571b-4d65-8e0b-dd629d89e0e6"",
-                    ""path"": ""<XRController>{LeftHand}/isTracked"",
+                    ""id"": ""6bbf20bb-c82e-4b6c-a1a1-3719ffb09bd1"",
+                    ""path"": ""<XRController>{LeftHand}/primary2DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -51,8 +51,8 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6bbf20bb-c82e-4b6c-a1a1-3719ffb09bd1"",
-                    ""path"": ""<XRController>{RightHand}/isTracked"",
+                    ""id"": ""bd2b85ef-571b-4d65-8e0b-dd629d89e0e6"",
+                    ""path"": ""<XRController>{RightHand}/primary2DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
