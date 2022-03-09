@@ -17,7 +17,7 @@ public class Hand : MonoBehaviour
     public HandType type = HandType.Left;
     public bool isHidden { get; private set; } = false;
 
-    public InputActions trackedAction = null;
+    public InputAction trackedAction = null;
 
     bool m_isCurrentlyTracked = false;
 
@@ -37,27 +37,20 @@ public class Hand : MonoBehaviour
         }
     }
 
-    
+    [Obsolete]
     private void OnEnable()
     {
-        interactor.selectEntered.AddListener(OnGrab);
-        interactor.selectExited.AddListener(OnRelease);
+        interactor.onSelectEntered.AddListener(OnGrab);
+        interactor.onSelectExited.AddListener(OnRelease);
+
+
     }
 
-    private void OnRelease(SelectExitEventArgs arg0)
-    {
-        throw new NotImplementedException();
-    }
-
-    private void OnGrab(SelectEnterEventArgs arg0)
-    {
-        throw new NotImplementedException();
-    }
-
+    [Obsolete]
     private void OnDisable()
     {
-        interactor.selectEntered.RemoveListener(OnGrab);
-        interactor.selectExited.RemoveListener(OnRelease);
+        interactor.onSelectEntered.RemoveListener(OnGrab);
+        interactor.onSelectExited.RemoveListener(OnRelease);
     }
 
     // Start is called before the first frame update
