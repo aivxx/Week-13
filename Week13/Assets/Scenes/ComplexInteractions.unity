@@ -616,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1298385331937259992, guid: 9f308e59b7c11c947bc126417619ffe7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5003
+      value: 0.4963
       objectReference: {fileID: 0}
     - target: {fileID: 1298385331937259992, guid: 9f308e59b7c11c947bc126417619ffe7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -690,6 +690,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 506341728}
+    - target: {fileID: 1311430100371976421, guid: 9f308e59b7c11c947bc126417619ffe7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0574
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311430100371976421, guid: 9f308e59b7c11c947bc126417619ffe7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311430100371976421, guid: 9f308e59b7c11c947bc126417619ffe7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0005
+      objectReference: {fileID: 0}
     - target: {fileID: 2028705323445557860, guid: 9f308e59b7c11c947bc126417619ffe7, type: 3}
       propertyPath: endDragPos
       value: 
@@ -803,8 +815,16 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2366739920169004897, guid: 9f308e59b7c11c947bc126417619ffe7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0564
+      objectReference: {fileID: 0}
+    - target: {fileID: 2366739920169004897, guid: 9f308e59b7c11c947bc126417619ffe7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0059
+      value: 0.0026
+      objectReference: {fileID: 0}
+    - target: {fileID: 2366739920169004897, guid: 9f308e59b7c11c947bc126417619ffe7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0002
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7586301723262080083, guid: 9f308e59b7c11c947bc126417619ffe7, type: 3}
