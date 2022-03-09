@@ -5,10 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.InputSystem;
+
 
 [Serializable]
-public class DragEvent: UnityEvent<float> { }
+public class DragEvent: UnityEvent<float> {}
 
 public class DragInteractable : XRBaseInteractable
 {
@@ -20,14 +20,16 @@ public class DragInteractable : XRBaseInteractable
 
    protected XRBaseInteractor m_interactor = null;
 
- 
-    
+
+    Coroutine m_drag = null;
 
     public UnityEvent onDragStart = new UnityEvent();
     public UnityEvent onDragEnd = new UnityEvent();
     public DragEvent onDragUpdate = new DragEvent();
 
-   Coroutine m_drag = null;
+  
+
+
     void StartDrag()
     {
         if(m_drag !=null)
@@ -60,7 +62,7 @@ public class DragInteractable : XRBaseInteractable
     IEnumerator CalculateDrag() 
     {
 
-        while(m_drag != null)
+        while(m_interactor != null)
         {
             //get a line in local space
             Vector3 line = startDragPos.localPosition - endDragPos.localPosition;
@@ -82,8 +84,8 @@ public class DragInteractable : XRBaseInteractable
        
     }
 
-    [System.Obsolete]
-    protected void SelectEntered(XRBaseInteractor interactor)
+    [Obsolete]
+    protected void OnSelectEntered(XRBaseInteractor interactor)
     {
         m_interactor = interactor;
         StartDrag();
@@ -92,7 +94,7 @@ public class DragInteractable : XRBaseInteractable
     }
 
     [Obsolete]
-    protected void SelectExited(XRBaseInteractor interactor)
+    protected void OnSelectExited(XRBaseInteractor interactor)
     {
         EndDrag();
         base.OnSelectExited(interactor);
