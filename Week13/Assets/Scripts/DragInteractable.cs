@@ -12,23 +12,20 @@ public class DragEvent: UnityEvent<float> {}
 
 public class DragInteractable : XRBaseInteractable
 {
-    public Transform startDragPos = null;
-    public Transform endDragPos = null;
+    [SerializeField]  Transform startDragPos = null;
+    [SerializeField]  Transform endDragPos = null;
 
     [HideInInspector]
     public float dragPercent = 0.0f; //[0,1] 
 
    protected XRBaseInteractor m_interactor = null;
 
-
-    Coroutine m_drag = null;
-
     public UnityEvent onDragStart = new UnityEvent();
     public UnityEvent onDragEnd = new UnityEvent();
     public DragEvent onDragUpdate = new DragEvent();
 
   
-
+   Coroutine m_drag = null;
 
     void StartDrag()
     {
@@ -85,7 +82,7 @@ public class DragInteractable : XRBaseInteractable
     }
 
     [Obsolete]
-    protected void OnSelectEntered(XRBaseInteractor interactor)
+    protected override void OnSelectEntered(XRBaseInteractor interactor)
     {
         m_interactor = interactor;
         StartDrag();
@@ -94,7 +91,7 @@ public class DragInteractable : XRBaseInteractable
     }
 
     [Obsolete]
-    protected void OnSelectExited(XRBaseInteractor interactor)
+    protected override void OnSelectExited(XRBaseInteractor interactor)
     {
         EndDrag();
         base.OnSelectExited(interactor);
