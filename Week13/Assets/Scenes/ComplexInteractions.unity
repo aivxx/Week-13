@@ -324,7 +324,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1292
+  m_Name: pb_Mesh-1294
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1287,7 +1287,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1304
+  m_Name: pb_Mesh-1306
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1813,7 +1813,15 @@ MonoBehaviour:
     m_Id: 2e56f72e-9a8b-44ab-a9d7-ea444b211bd4
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d119b5e3-b2d2-4279-a330-cbe5ef412a1c
+      m_Path: <XRController>{RightHand}/isTracked
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Tracked
+      m_Flags: 0
     m_Flags: 0
   interactor: {fileID: 1616338915}
 --- !u!1 &1622083113
@@ -2176,7 +2184,15 @@ MonoBehaviour:
     m_Id: e1eab761-3472-40f8-b56e-4c07aa7be5c2
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 83e84f10-f582-4e7b-b3d3-cd5caff61cdf
+      m_Path: <XRController>{LeftHand}/isTracked
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Tracked
+      m_Flags: 0
     m_Flags: 0
   interactor: {fileID: 1622083116}
 --- !u!1 &1665719451

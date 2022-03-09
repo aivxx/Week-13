@@ -21,7 +21,7 @@ public class Hand : MonoBehaviour
 
     bool m_isCurrentlyTracked = false;
 
-    List<Renderer> m_currentRenderers = new List<Renderer>();
+    List<MeshRenderer> m_currentRenderers = new List<MeshRenderer>();
 
     Collider[] m_colliders = null;
 
@@ -81,7 +81,7 @@ public class Hand : MonoBehaviour
 
     public void Show()
     {
-        foreach (Renderer renderer in m_currentRenderers)
+        foreach (MeshRenderer renderer in m_currentRenderers)
         {
             renderer.enabled = true;
             
@@ -93,8 +93,8 @@ public class Hand : MonoBehaviour
     public void Hide()
     {
         m_currentRenderers.Clear();
-        Renderer[] renderers = GetComponentsInChildren<Renderer>();
-        foreach(Renderer renderer in renderers)
+        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
+        foreach(MeshRenderer renderer in renderers)
         {
             renderer.enabled = false;
             m_currentRenderers.Add(renderer);
